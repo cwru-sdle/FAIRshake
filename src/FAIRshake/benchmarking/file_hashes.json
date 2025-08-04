@@ -1,0 +1,95 @@
+{
+    "url_base": "http://ftp.edna-site.org/pyFAI/testimages",
+    "datasets": [
+        {
+            "name": "Eiger4M",
+            "type": "poni",
+            "filename": "Eiger4M.poni",
+            "size": 2009,
+            "hash": "ed8ae67050fa82968864141827fe97bbefdbc94ece9e2c6d84386c1bd453bbea"
+        },
+        {
+            "name": "Eiger4M",
+            "type": "image",
+            "filename": "Eiger4M.edf",
+            "size": 17943272,
+            "hash": "39b90a49eecdc2078383ae4638feef8b6b0dff5b43698ae7437ff26fcaeb4711",
+            "megapixels": 4.48569
+        },
+        {
+            "name": "Fairchild",
+            "type": "poni",
+            "filename": "Fairchild.poni",
+            "size": 338,
+            "hash": "8e71357ff095e2e0b24808f67c97f8a1f0b2f4d3621e65ff88fb815e3e5505a2"
+        },
+        {
+            "name": "Fairchild",
+            "type": "image",
+            "filename": "Fairchild.edf",
+            "size": 33555456,
+            "hash": "140759bc0b1e2ab0686fe860910bd36f9edd2d5461e4d99a83d8ffa9ad4732cc",
+            "megapixels": 16.777216
+        },
+        {
+            "name": "LaB6_260210",
+            "type": "poni",
+            "filename": "Mar3450.poni",
+            "size": 353,
+            "hash": "7342a6d3ba695b844329f16987ef17b274cb485f028a0594efd87bc39b930c01"
+        },
+        {
+            "name": "LaB6_260210",
+            "type": "image",
+            "filename": "LaB6_260210.mar3450",
+            "size": 7473209,
+            "hash": "157d777bd9d623d34a4b956dc341b3267cde3128b9f04c47f0d7150692facccf",
+            "megapixels": 11.9025
+        },
+        {
+            "name": "Pilatus1M",
+            "type": "poni",
+            "filename": "Pilatus1M.poni",
+            "size": 274,
+            "hash": "1ad44dab45efc0c7ad218aafa89fccc476299fa8d7a6055703c501a63ea50bec"
+        },
+        {
+            "name": "Pilatus1M",
+            "type": "image",
+            "filename": "Pilatus1M.edf",
+            "size": 4093756,
+            "hash": "a7a2d5b47930060478bc41d91fceb627807630cc8679a33f31b969b76957a3aa",
+            "megapixels": 1.023183
+        },
+        {
+            "name": "Pilatus2M",
+            "type": "poni",
+            "filename": "Pilatus2M.poni",
+            "size": 367,
+            "hash": "d359e73318cc5e7af6de3036876dfbbc097907ee6710e88bf142cda556076ebf"
+        },
+        {
+            "name": "Pilatus2M",
+            "type": "image",
+            "filename": "Pilatus2M.cbf",
+            "size": 2976988,
+            "hash": "eccb5d1ee4e38a9ca1adcb174049296722e1e2bedfdf0c0eb55122bb8c3c897f",
+            "megapixels": 2.476525
+        },
+        {
+            "name": "Pilatus6M",
+            "type": "poni",
+            "filename": "Pilatus6M.poni",
+            "size": 213,
+            "hash": "70f8b71434b33438c5304eb1438b4413a959e53b11b912a3a9ce2da111a4d156"
+        },
+        {
+            "name": "Pilatus6M",
+            "type": "image",
+            "filename": "Pilatus6M.cbf",
+            "size": 6230840,
+            "hash": "6322bcd33dd2faed4dcac284c54ad6f318dee50829bb2e523a8537d2094eac37",
+            "megapixels": 6.224001
+        }
+    ]
+}

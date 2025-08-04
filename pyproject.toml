@@ -1,23 +1,39 @@
 [build-system]
-requires = ["setuptools>=61.0", "torch"]
+requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
-
 
 [project]
 name = "FAIRshake"
-dependencies = [
-    'numpy'
+version = "0.1.0"
+description = "Sample Handling and Analysis Kit for Experiments"
+authors = [
+    { name = "Finley Holt", email = "finley0454@gmail.com" }
 ]
+license = { file = "LICENSE.txt" }
 readme = "README.md"
-license = {file = "LICENSE"}
-authors = [{ name = "Ben Pierce", email = "pierce@case.edu" }]
-version = "2024.07.03"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "Pillow",
+    "click",
+    "fabio",
+    "h5py",
+    "imageio",
+    "matplotlib",
+    "numpy",
+    "psutil",
+    "pyFAI",
+    "requests",
+    "tensorflow",
+    "torch"
+]
 
-[project.optional-dependencies]
-test = ["pytest"]
-
+[tool.setuptools]
+package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
-include = ["FAIRshake*"]
-
-[tool.setuptools_scm]
+where = ["src"]

@@ -1,0 +1,12 @@
+Pillow
+click
+fabio
+h5py
+imageio
+matplotlib
+numpy
+psutil
+pyFAI
+requests
+tensorflow
+torch

@@ -1,1 +1,80 @@
-FAIRshake workflow
+name: Build, Test, and Publish
+
+on:
+  push:
+    branches: [ "main" ]
+  release:
+    types: [ created ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Create virtual environment
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install --upgrade pip
+          pip install build twine
+
+      - name: Install Package Dependencies
+        run: |
+          source venv/bin/activate
+          pip install -e .
+
+      - name: Build the Package
+        run: |
+          source venv/bin/activate
+          python -m build
+
+      - name: Run Tests
+        run: |
+          source venv/bin/activate
+          echo "Running tests..."
+          # Add your test commands here, e.g., pytest
+
+  publish-to-testpypi:
+    if: github.event_name == 'release'
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Create virtual environment
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install --upgrade pip
+          pip install build twine
+
+      - name: Install Package Dependencies
+        run: |
+          source venv/bin/activate
+          pip install -e .
+
+      - name: Build the Package
+        run: |
+          source venv/bin/activate
+          python -m build
+
+      - name: Publish to TestPyPI
+        env:
+          TWINE_USERNAME: "__token__"
+          TWINE_PASSWORD: ${{ secrets.TEST_PYPI_TOKEN }}
+        run: |
+          source venv/bin/activate
+          twine upload --repository testpypi dist/*
