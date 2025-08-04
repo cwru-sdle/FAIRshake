@@ -41,7 +41,7 @@ jobs:
           echo "Running tests..."
           # Add your test commands here, e.g., pytest
 
-  publish-to-testpypi:
+  publish-to-pypi:
     if: github.event_name == 'release'
     needs: build-and-test
     runs-on: ubuntu-latest
@@ -71,10 +71,10 @@ jobs:
           source venv/bin/activate
           python -m build
 
-      - name: Publish to TestPyPI
+      - name: Publish to PyPI
         env:
           TWINE_USERNAME: "__token__"
-          TWINE_PASSWORD: ${{ secrets.TEST_PYPI_TOKEN }}
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           source venv/bin/activate
-          twine upload --repository testpypi dist/*
+          twine upload dist/*
