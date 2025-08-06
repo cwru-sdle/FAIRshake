@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "FAIRshake"
-version = "0.1.0"
+version = "0.1.2"
 description = "Sample Handling and Analysis Kit for Experiments"
 authors = [
     { name = "Finley Holt", email = "finley0454@gmail.com" }

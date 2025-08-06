@@ -61,13 +61,19 @@ FAIRshake (Sample Handling and Analysis Kit for Experiments) is a comprehensive 
 
 - Python 3.11 or higher
 
+### From PyPi
+
+```bash
+pip install FAIRshake
+```
+
 ### From Source
 
 Clone the repository and install FAIRshake locally:
 
 ```bash
-git clone https://github.com/FinleyHolt/SHAKE.git
-cd SHAKE
+git clone https://github.com/cwru-sdle/FAIRshake.git
+cd FAIRshake
 pip install .
 ```
 
