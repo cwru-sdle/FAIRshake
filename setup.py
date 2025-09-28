@@ -2,13 +2,13 @@ from setuptools import setup, find_packages
 
 setup(
     name="FAIRshake",
-    version="0.1.2",
+    version="0.1.3",
     author="Finley Holt",
     author_email="finley0454@gmail.com",
     description="A comprehensive data processing pipeline for FAIRshake.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/FinleyHolt/SHAKE",
+    url="https://github.com/cwru-sdle/FAIRshake",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     include_package_data=True,
